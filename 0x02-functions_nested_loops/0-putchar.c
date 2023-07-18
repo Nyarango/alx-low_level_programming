@@ -1,23 +1,15 @@
-#include "main.h"
+#include <stdio.h>
 
 /**
  *main - Entry point of the program
  *
- *Description: This function prints "_putchar" character by character
- *              using the _putchar function and returns 0.
+ *Description: This function prints "_putchar" followed by a new line
+ *              and returns 0.
  *
  *Return: 0 (Success)
  */
 int main(void)
 {
-_putchar('_');
-_putchar('p');
-_putchar('u');
-_putchar('t');
-_putchar('c');
-_putchar('h');
-_putchar('a');
-_putchar('r');
-_putchar('\n');
+printf("_putchar\n");
 return (0);
 }
