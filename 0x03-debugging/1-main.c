@@ -1,26 +1,25 @@
 #include <stdio.h>
 
 /**
-*main - causes an infinite loop
-*Return: 0
-*/
+ *main - Prints numbers from '0' to '9'
+ *Return: Always 0 (Success)
+ */
 
 int main(void)
 {
-int i;
+char i;
 
 printf("Infinite loop incoming :(\n");
 
-i = 0;
+i = '0';
 
-/*
- * while (i < 10)
+while (i <= '9')
 {
 putchar(i);
+i++;
 }
-*/
 
-printf("Infinite loop avoided! \\o/\n");
+printf("\nInfinite loop avoided! \\o/\n");
 
 return (0);
 }
