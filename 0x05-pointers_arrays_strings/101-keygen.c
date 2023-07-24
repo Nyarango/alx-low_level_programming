@@ -1,11 +1,7 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <time.h>
-/**
- * main - entry point generates a random password
- *
- * Return: the generated password
- */
+
 #define PASSWORD_LENGTH 12
 
 int main(void)
