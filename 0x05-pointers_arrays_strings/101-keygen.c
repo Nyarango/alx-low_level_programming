@@ -6,18 +6,28 @@
  *
  * Return: the generated password
  */
+#define PASSWORD_LENGTH 12
+
 int main(void)
 {
-char c;
-int x;
+// Characters that can be used in the password
+const char charset[] = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789";
+char password[PASSWORD_LENGTH + 1]; // Extra 1 for the null terminator '\0'
 
-srand(time(0));
-while (x <= 2645)
+// Seed the random number generator with the current time
+srand(time(NULL));
+
+// Generate the random password
+for (int i = 0; i < PASSWORD_LENGTH; i++)
 {
-c = rand() % 128;
-x += c;
-putchar(c);
+int index = rand() % (sizeof(charset) - 1); // Get a random index in the charset
+password[i] = charset[index];
 }
-putchar(2772 - x);
-return (0);
+
+password[PASSWORD_LENGTH] = '\0'; // Null-terminate the password
+
+// Print the generated password
+printf("%s\n", password);
+
+return 0;
 }
