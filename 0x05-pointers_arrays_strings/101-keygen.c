@@ -1,29 +1,23 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <time.h>
-
-#define PASSWORD_LENGTH 12
-
+/**
+ * main - entry point generates a random password
+ *
+ * Return: the generated password
+ */
 int main(void)
 {
-// Characters that can be used in the password
-const char charset[] = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789";
-char password[PASSWORD_LENGTH + 1]; // Extra 1 for the null terminator '\0'
+char c;
+int x;
 
-// Seed the random number generator with the current time
-srand(time(NULL));
-
-// Generate the random password
-for (int i = 0; i < PASSWORD_LENGTH; i++)
+srand(time(0));
+while (x <= 2645)
 {
-int index = rand() % (sizeof(charset) - 1); // Get a random index in the charset
-password[i] = charset[index];
+c = rand() % 128;
+x += c;
+putchar(c);
 }
-
-password[PASSWORD_LENGTH] = '\0'; // Null-terminate the password
-
-// Print the generated password
-printf("%s\n", password);
-
-return 0;
+putchar(2772 - x);
+return (0);
 }
