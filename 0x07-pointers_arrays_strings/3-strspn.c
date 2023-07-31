@@ -1,21 +1,27 @@
 #include "main.h"
-
 /**
- *_strchr - Entry point
- *@s: input string
- *@c: character to search for
- *
- *Return: Pointer to the first occurrence of the character in the string
- *         or NULL if the character is not found
+ *_strspn - Entry point
+ *@s: input
+ *@accept: input
+ *Return: Always 0 (Success)
  */
-char *_strchr(char *s, char c)
+unsigned int _strspn(char *s, char *accept)
 {
-int i = 0;
-
-for (; s[i] >= '\0'; i++)
+unsigned int n = 0;
+int r;
+while (*s)
 {
-if (s[i] == c)
-return (&s[i]);
+for (r = 0; accept[r]; r++)
+{
+if (*s == accept[r])
+{
+n++;
+break;
 }
-return (0);
+else if (accept[r + 1] == '\0')
+return (n);
+}
+s++;
+}
+return (n);
 }
