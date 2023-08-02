@@ -15,4 +15,3 @@ _puts_recursion(s + 1);
 else
 _putchar('\n');
 }
-
