@@ -4,7 +4,13 @@
 
 /**
  *print_all - prints anything
- * format: list of types of arguments passed to the function
+ *format: list of types of arguments passed to the function
+ *@format: The format string that specifies the types of arguments
+ *that will be passed to the function. The format can include
+ *'c' for char, 'i' for int, 'f' for float, and 's' for string.
+ *Any other characters are ignored.
+ *If 'format' is NULL, the function does nothing.
+ *@...: The variable number of arguments to be printed based on the format.
  */
 void print_all(const char * const format, ...)
 {
